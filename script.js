@@ -97,8 +97,6 @@
 // }
 
 
-"use strict"
-
 class Horse{
 
     element 
@@ -121,9 +119,9 @@ class Horse{
         this.x += Math.floor(Math.random()*10)
 }
 
-    checkForWin(){
+    checkForWin(h){
         if(this.x >=finish){
-            alert(`$(colors[h]} horse wins`)
+            alert(`${colors[h]} horse wins`)
             resetRace();
     }
 }
@@ -156,7 +154,7 @@ function moveHorses(){
 
         let horse=horses[h]
         horse.move()
-        horse.checkForWin()
+        horse.checkForWin(h)
     }
 }
 
